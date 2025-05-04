@@ -10,27 +10,22 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
-
+```python
+#include <stdio.h>
+int main()
+{
+    char ch,ch1,ch2;
+    scanf("%c%c%c",&ch,&ch1,&ch2);
+    printf("The reverse of %c%c%c is %c%c%c",ch,ch1,ch2,ch2,ch1,ch);
+    return 0;
+}
+```
 ## OUTPUT:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/7ffc8eec-a6f0-4e28-9889-9477073ab029)
 
 ## RESULT:
 Thus the program to read 3 characters one by one and print the characters in a reverse order has been executed successfully.
+
 
 
 # EX-02- Conditional-Statements
@@ -46,26 +41,31 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
-
+```python
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if (a>=0)
+    {
+        printf("Number is positive.");
+    }
+    else
+    {
+       printf("Number is negative.");
+    }
+    return 0;
+}
+```
 # OUTPUT:
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/f1c063f0-a91d-404e-8733-b0ce8647010f)
 
 # RESULT:
 Thus the program to read A values and check whether A is positive number or not has been executed successfully.
  
  
  
-
-
 # EX-03- Operators-Expressions
 ## AIM:
 Write a program to find minimum between two fraction numbers using conditional operator or ternary operator.
@@ -80,20 +80,29 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+```python
+#include <stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    if (a<b)
+    {
+        printf("Minimum between %d and %d is %d",a,b,a);
+    }
+    else
+    {
+        printf("Minimum between %d and %d is %d",a,b,b);
+    }
 
+    return 0;
+}
+```
 ## OUTPUT:
-
-
-
-
-
-
-
-
+![Screenshot 2025-05-04 150522](https://github.com/user-attachments/assets/70753eb9-9bbb-4bb7-b2b9-8bdc6d4aa096)
 
 ## RESULT:
 Thus the program to find minimum between two fraction numbers using conditional operator or ternary operator has been executed successfully.
-
 
 
 
@@ -111,18 +120,17 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
-
+```python
+#include <stdio.h>
+int main()
+    int a;
+    scanf("%d",&a);
+    if(a==1)
+    printf("TRUE");
+}
+```
 ## OUTPUT:
-
-
-
-
-
-
-
-
-
-	
+![image](https://github.com/user-attachments/assets/1a019f61-9078-46cf-981f-97f1032c5c96)	
 
 ## RESULT:
 Thus the program to check whether the input value is equal to 1 using simple if statement has been executed successfully
@@ -147,8 +155,32 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
-
+```python
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int phy,che,ca,total;
+    float per;
+    char div[10];
+    scanf("%d%d%d",&phy,&che,&ca);
+    total = phy+che+ca;
+    per = total/3.0;
+    if (per>=60)
+         strcpy(div,"First");
+    else if (per<60&&per>=48)
+            strcpy(div,"Second");
+    else
+        if (per<48&&per>=36)
+           strcpy(div,"Pass");
+        else
+            strcpy(div,"Fail");
+    printf("Total Marks = %d\nPercentage = %5.2f\nDivision = %s\n",total)
+    return 0;
+}
+```
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/903bc925-3348-4046-9eb0-e148110d1794)
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
